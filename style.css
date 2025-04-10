@@ -1,0 +1,98 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #EAE7DC; /* Bege claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título principal */
+h1 {
+    margin-top: 20px;
+    color: #3E363F; /* Marrom escuro */
+}
+
+/* Container de produtos */
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Cada produto */
+.produto {
+    text-align: center;
+    background: #D8C3A5; /* Bege mais escuro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    width: 200px;
+}
+
+/* Imagens dos produtos */
+.produto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.produto:hover {
+    transform: scale(1.05);
+    background: #C8B6A6; /* Bege mais neutro */
+}
+
+/* Nome e preço do produto */
+.produto p {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5D534A; /* Tom terroso para melhor leitura */
+}
+
+/* Seção de presentes já recebidos */
+h2 {
+    margin-top: 30px;
+    color: #3E363F;
+}
+
+/* Ajuste para imagens dos presentes recebidos */
+.presentes-recebidos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.presentes-recebidos img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== 📌 Responsividade para telas pequenas ======== */
+@media (max-width: 768px) {
+    .produtos {
+        flex-direction: column; /* Empilhar os produtos em telas pequenas */
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%; /* Ocupar mais espaço na tela */
+        max-width: 300px;
+    }
+
+    .produto img {
+        width: 100%; /* Ajustar imagens ao tamanho do container */
+        max-width: 200px;
+    }
+
+    body {
+        padding: 10px; /* Adicionar um espaçamento nas laterais */
+    }
+}
